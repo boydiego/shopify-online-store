@@ -13,8 +13,58 @@ puts "✅ products destroyed successfully"
 puts "..."
 puts "🌱 creating products"
 
-Product.create(title: "Snowboard", description: "Glides like butter", image: "./../app/assets/images/snowboard-unsplash.jpg", price: "120")
+seed_data = [
+  {
+    params: {
+      title: "Snowboard",
+      description: "Glides like butter",
+      price: "120"
+    },
+    image: "app/assets/images/snowboard-unsplash.jpg",
+  },
+  {
+    params: {
+      title: "Nintendo Switch",
+      description: "Play fun games everywhere",
+      price: "349,99"
+    },
+    image: "app/assets/images/nintendoswitch-unsplash.jpg",
+  },
+  {
+    params: {
+      title: "Surfboard",
+      description: "Ride your wave",
+      price: "89,99"
+    },
+    image: "app/assets/images/surfboard-unsplash.jpg",
+  },
+  {
+    params: {
+      title: "Smart TV",
+      description: "Never miss an apisode",
+      price: "240,30"
+    },
+    image: "app/assets/images/smarttv-unsplash.jpg",
+  },
+  {
+    params: {
+      title: "Music Box",
+      description: "Best sound all around",
+      price: "90"
+    },
+    image: "app/assets/images/musicbox-unsplash.jpg",
+  }
+]
 
-Product.create(title: "Nintendo Switch", description: "Play fun games everywhere", image: "./../app/assets/images/nintendoswitch-unsplash.jpg", price: "349,99")
+seed_data.each do |product|
+  puts "Creating #{product[:params][:title]}..."
+  new_product = Product.new(product[:params])
+  new_product.image.attach(
+    io: File.open(product[:image]),
+    filename: product[:image].split('/').last,
+    content_type: 'image/jpg'
+  )
+  new_product.save!
+end
 
 puts "✅ products created successfully"

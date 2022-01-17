@@ -1,0 +1,33 @@
+form {
+  width: 100%;
+}
+
+.field {
+  padding: 10px 0;
+  width: 100%;
+}
+
+label {
+}
+
+input {
+  border-radius: 10px;
+  padding: 5px 15px;
+  width: 50%;
+}
+
+#product_image {
+  padding: 5px 0;
+}
+
+.actions > input {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.actions > input:hover {
+  transition: 300ms;
+  color: #9d8d6c;
+  background-color: #001f35;
+  box-shadow: 0px 0px 15px 5px rgba(157,141,108,0.8);
+}

@@ -13,11 +13,13 @@ puts "✅ products destroyed successfully"
 puts "..."
 puts "🌱 creating products"
 
+description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor malesuada dapibus. Morbi vulputate tempor convallis. Cras congue sodales justo, sit amet dignissim libero. Nulla mattis lectus iaculis nibh ultricies, et luctus quam interdum. Quisque a dolor lobortis, finibus leo a, dictum urna. Fusce scelerisque, mi et cursus ultrices, risus neque facilisis mauris, vitae dapibus orci odio in nulla. Nam bibendum nisi lobortis, lobortis magna sit amet, scelerisque diam.'
+
 seed_data = [
   {
     params: {
       title: "Snowboard",
-      description: "Glides like butter",
+      description: description,
       price: "120"
     },
     image: "app/assets/images/snowboard-unsplash.jpg",
@@ -25,7 +27,7 @@ seed_data = [
   {
     params: {
       title: "Nintendo Switch",
-      description: "Play fun games everywhere",
+      description: description,
       price: "349,99"
     },
     image: "app/assets/images/nintendoswitch-unsplash.jpg",
@@ -33,7 +35,7 @@ seed_data = [
   {
     params: {
       title: "Surfboard",
-      description: "Ride your wave",
+      description: description,
       price: "89,99"
     },
     image: "app/assets/images/surfboard-unsplash.jpg",
@@ -41,7 +43,7 @@ seed_data = [
   {
     params: {
       title: "Smart TV",
-      description: "Never miss an apisode",
+      description: description,
       price: "240,30"
     },
     image: "app/assets/images/smarttv-unsplash.jpg",
@@ -49,7 +51,7 @@ seed_data = [
   {
     params: {
       title: "Music Box",
-      description: "Best sound all around",
+      description: description,
       price: "90"
     },
     image: "app/assets/images/musicbox-unsplash.jpg",

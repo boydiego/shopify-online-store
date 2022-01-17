@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title %> <br>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description %> <br>
     <%= form.text_field :description %>
   </div>
 
@@ -25,13 +25,13 @@
     <% if product.image.attached? %>
       <%= image_tag product.image, style: "width: 200px; display: block" %>
     <% end %>
-
-    <%= form.label :image %>
+    <br>
+    <%= form.label :image %> <br>
     <%= form.file_field :image %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :price %> <br>
     <%= form.text_field :price %>
   </div>
 

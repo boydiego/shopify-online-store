@@ -5,24 +5,29 @@ form {
 .field {
   padding: 10px 0;
   width: 100%;
-}
-
-label {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
   border-radius: 10px;
   padding: 5px 15px;
-  width: 50%;
+  width: 100%;
 }
 
 #product_image {
   padding: 5px 0;
 }
 
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
 .actions > input {
   transition: 300ms;
   cursor: pointer;
+  width: 50%;
 }
 
 .actions > input:hover {
